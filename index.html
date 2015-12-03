@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>HI</title>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- needed for serializeObject();-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.0.0/jquery.serialize-object.compiled.js"></script>
+
+
+</head>
+<body>
+<form id="form">
+	First Name: 
+	<input name='fname' value='Christopher' /><br />
+	Last Name:
+	<input name='lname' value='Cornwallace' /><br />
+
+	<button type="button" id="button">Send</button>
+
+</form>
+
+<script>
+//gathers info from form and converts it into an object
+	$("#button").click(function(){
+		model_data = $("form").serializeObject();
+		console.log("First Name = : " + model_data.fname);
+		console.log("Last Name = : " + model_data.lname);
+	});
+
+
+</script>
+		
+</body>
+</html>
